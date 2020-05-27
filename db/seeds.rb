@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+cat = ["chinese", "italian", "japanese", "french", "belgian"]
+num = ["1234", "571", "00"]
+street = ["Pitfield", "Main", "Oxford", "Ivy", "High", "Old"]
+name = ["Pizza Union", "Bone Daddies", "Ottolenghi", "Nopi", "Padella"]
+
+5.times do
+Restaurant.create(name: name.sample, address: street.sample + "street", category: cat.sample, phone_number: num.sample(3))
+end
